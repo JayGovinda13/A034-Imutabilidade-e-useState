@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useSyncExternalStore } from 'react'
+import styled from 'styled-components'
 import {Card, PokemonName, PokemonType, EvolveButton} from './styles'
 
 
@@ -10,11 +11,11 @@ const PokemonCard = (props) => {
     }
     
   return (
-    <Card color={}>
-        <img src={} alt={`Pokemon`}/>
-        <PokemonName>{}</PokemonName>
-        <PokemonType>{}</PokemonType>
-        <p>{}kg</p>
+    <Card color={props.pokemon.color}>
+        <img src={props.pokemo.image} alt={`Pokemon`}/>
+        <PokemonName>{props.pokemon.name}</PokemonName>
+        <PokemonType>{props.pokemon.type}</PokemonType>
+        <p>{props.pokemon.weigth}kg</p>
 
         <EvolveButton onClick={() => evoluirPokemon()}>Evoluir!</EvolveButton>
     </Card>
